@@ -35,7 +35,7 @@ public class Juego {
             }
 
         }  catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error de escritura del fichero");
         }
         try(RandomAccessFile fichero=new RandomAccessFile(directorio + nombre_fichero, "r")){
             fichero.seek(0);
@@ -59,6 +59,7 @@ public class Juego {
         } catch (IOException e) {
             System.out.println("Error al leer el fichero.");
         }
+        sc.close();
     }
 
 }
